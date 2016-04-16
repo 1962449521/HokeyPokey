@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		431A46991CC2B68D008E7432 /* DVTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431A46961CC2B68D008E7432 /* DVTKit.framework */; };
+		431A469A1CC2B68D008E7432 /* IDEFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431A46971CC2B68D008E7432 /* IDEFoundation.framework */; };
+		431A469B1CC2B68D008E7432 /* IDEKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 431A46981CC2B68D008E7432 /* IDEKit.framework */; };
+		431A469F1CC2B725008E7432 /* WHUKVOController.m in Sources */ = {isa = PBXBuildFile; fileRef = 431A469E1CC2B725008E7432 /* WHUKVOController.m */; };
+		431A46A51CC2B8A4008E7432 /* NSString+HPKTextGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 431A46A41CC2B8A4008E7432 /* NSString+HPKTextGetter.m */; };
+		43B7E1A31CBCDE9700058800 /* HPKPluginMain.m in Sources */ = {isa = PBXBuildFile; fileRef = 43B7E1A21CBCDE9700058800 /* HPKPluginMain.m */; };
+		43F8B2891CBD4593005B7298 /* HPKWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43F8B2871CBD4593005B7298 /* HPKWindowController.m */; };
+		43F8B28A1CBD4593005B7298 /* HPKWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43F8B2881CBD4593005B7298 /* HPKWindowController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		431A46961CC2B68D008E7432 /* DVTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DVTKit.framework; sourceTree = "<group>"; };
+		431A46971CC2B68D008E7432 /* IDEFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IDEFoundation.framework; sourceTree = "<group>"; };
+		431A46981CC2B68D008E7432 /* IDEKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IDEKit.framework; sourceTree = "<group>"; };
+		431A469D1CC2B725008E7432 /* WHUKVOController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WHUKVOController.h; sourceTree = "<group>"; };
+		431A469E1CC2B725008E7432 /* WHUKVOController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WHUKVOController.m; sourceTree = "<group>"; };
+		431A46A01CC2B790008E7432 /* WHUMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHUMacro.h; sourceTree = "<group>"; };
+		431A46A11CC2B7D6008E7432 /* XcodeMisc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XcodeMisc.h; sourceTree = "<group>"; };
+		431A46A31CC2B8A4008E7432 /* NSString+HPKTextGetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HPKTextGetter.h"; sourceTree = "<group>"; };
+		431A46A41CC2B8A4008E7432 /* NSString+HPKTextGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HPKTextGetter.m"; sourceTree = "<group>"; };
+		4331CDC81CBE8C820056B21B /* HPKConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HPKConst.h; sourceTree = "<group>"; };
+		43B7E1981CBCDDC800058800 /* HokeyPokey.xcplugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HokeyPokey.xcplugin; sourceTree = BUILT_PRODUCTS_DIR; };
+		43B7E19B1CBCDDC800058800 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		43B7E1A11CBCDE9700058800 /* HPKPluginMain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPKPluginMain.h; sourceTree = "<group>"; };
+		43B7E1A21CBCDE9700058800 /* HPKPluginMain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPKPluginMain.m; sourceTree = "<group>"; };
+		43F8B2861CBD4593005B7298 /* HPKWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPKWindowController.h; sourceTree = "<group>"; };
+		43F8B2871CBD4593005B7298 /* HPKWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPKWindowController.m; sourceTree = "<group>"; };
+		43F8B2881CBD4593005B7298 /* HPKWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HPKWindowController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		43B7E1951CBCDDC800058800 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				431A469A1CC2B68D008E7432 /* IDEFoundation.framework in Frameworks */,
+				431A469B1CC2B68D008E7432 /* IDEKit.framework in Frameworks */,
+				431A46991CC2B68D008E7432 /* DVTKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		431A46951CC2B68C008E7432 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				431A46A11CC2B7D6008E7432 /* XcodeMisc.h */,
+				431A46961CC2B68D008E7432 /* DVTKit.framework */,
+				431A46971CC2B68D008E7432 /* IDEFoundation.framework */,
+				431A46981CC2B68D008E7432 /* IDEKit.framework */,
+			);
+			path = Framework;
+			sourceTree = "<group>";
+		};
+		431A469C1CC2B725008E7432 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				431A46A01CC2B790008E7432 /* WHUMacro.h */,
+				431A469D1CC2B725008E7432 /* WHUKVOController.h */,
+				431A469E1CC2B725008E7432 /* WHUKVOController.m */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		431A46A21CC2B8A4008E7432 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				431A46A31CC2B8A4008E7432 /* NSString+HPKTextGetter.h */,
+				431A46A41CC2B8A4008E7432 /* NSString+HPKTextGetter.m */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		43B7E18F1CBCDDC800058800 = {
+			isa = PBXGroup;
+			children = (
+				43B7E19A1CBCDDC800058800 /* HokeyPokey */,
+				43B7E1991CBCDDC800058800 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		43B7E1991CBCDDC800058800 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				43B7E1981CBCDDC800058800 /* HokeyPokey.xcplugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		43B7E19A1CBCDDC800058800 /* HokeyPokey */ = {
+			isa = PBXGroup;
+			children = (
+				431A46A21CC2B8A4008E7432 /* Util */,
+				431A469C1CC2B725008E7432 /* Vendor */,
+				431A46951CC2B68C008E7432 /* Framework */,
+				43B7E19B1CBCDDC800058800 /* Info.plist */,
+				4331CDC81CBE8C820056B21B /* HPKConst.h */,
+				43B7E1A11CBCDE9700058800 /* HPKPluginMain.h */,
+				43B7E1A21CBCDE9700058800 /* HPKPluginMain.m */,
+				43F8B2861CBD4593005B7298 /* HPKWindowController.h */,
+				43F8B2871CBD4593005B7298 /* HPKWindowController.m */,
+				43F8B2881CBD4593005B7298 /* HPKWindowController.xib */,
+			);
+			path = HokeyPokey;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		43B7E1971CBCDDC800058800 /* HokeyPokey */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 43B7E19E1CBCDDC800058800 /* Build configuration list for PBXNativeTarget "HokeyPokey" */;
+			buildPhases = (
+				43B7E1941CBCDDC800058800 /* Sources */,
+				43B7E1951CBCDDC800058800 /* Frameworks */,
+				43B7E1961CBCDDC800058800 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HokeyPokey;
+			productName = HokeyPokey;
+			productReference = 43B7E1981CBCDDC800058800 /* HokeyPokey.xcplugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		43B7E1901CBCDDC800058800 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Disney;
+				TargetAttributes = {
+					43B7E1971CBCDDC800058800 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 43B7E1931CBCDDC800058800 /* Build configuration list for PBXProject "HokeyPokey" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 43B7E18F1CBCDDC800058800;
+			productRefGroup = 43B7E1991CBCDDC800058800 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				43B7E1971CBCDDC800058800 /* HokeyPokey */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		43B7E1961CBCDDC800058800 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43F8B28A1CBD4593005B7298 /* HPKWindowController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43B7E1941CBCDDC800058800 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43B7E1A31CBCDE9700058800 /* HPKPluginMain.m in Sources */,
+				431A46A51CC2B8A4008E7432 /* NSString+HPKTextGetter.m in Sources */,
+				43F8B2891CBD4593005B7298 /* HPKWindowController.m in Sources */,
+				431A469F1CC2B725008E7432 /* WHUKVOController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		43B7E19C1CBCDDC800058800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		43B7E19D1CBCDDC800058800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		43B7E19F1CBCDDC800058800 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HokeyPokey",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HokeyPokey/Framework",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = Libraries/XcodeFrameworks;
+				INFOPLIST_FILE = HokeyPokey/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
+				OTHER_CODE_SIGN_FLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.netease.HokeyPokey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Debug;
+		};
+		43B7E1A01CBCDDC800058800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = "$(HOME)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HokeyPokey",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/HokeyPokey/Framework",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "";
+				HEADER_SEARCH_PATHS = Libraries/XcodeFrameworks;
+				INFOPLIST_FILE = HokeyPokey/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Developer/Shared/Xcode/Plug-ins";
+				OTHER_CODE_SIGN_FLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.netease.HokeyPokey;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = NO;
+				WRAPPER_EXTENSION = xcplugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		43B7E1931CBCDDC800058800 /* Build configuration list for PBXProject "HokeyPokey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43B7E19C1CBCDDC800058800 /* Debug */,
+				43B7E19D1CBCDDC800058800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		43B7E19E1CBCDDC800058800 /* Build configuration list for PBXNativeTarget "HokeyPokey" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				43B7E19F1CBCDDC800058800 /* Debug */,
+				43B7E1A01CBCDDC800058800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 43B7E1901CBCDDC800058800 /* Project object */;
+}

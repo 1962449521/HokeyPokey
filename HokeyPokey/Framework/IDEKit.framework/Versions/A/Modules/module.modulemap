@@ -1,0 +1,5 @@
+framework module IDEKit {
+    umbrella header "IDEKitPublic.h"
+    requires objc
+    export *
+}
