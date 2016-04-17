@@ -10,13 +10,12 @@
 
 @interface HPKPluginMain : NSObject
 
-// hokey pokey数据库
-@property (nonatomic, strong) NSMutableDictionary *originalTextDic;
-@property (nonatomic, strong) NSMutableDictionary *contentArrDic;
+/**
+ *  根据用户对hokey pokey窗口的点击更新XCode显示和物理文档
+ *
+ *  @param editedTitle 要操作的方案名
+ *  @param isShow      该方案是否显示
+ */
+- (void) refreshEditorAndFileAtTiltle:(NSString *)editedTitle shouldShow:(BOOL)shouldShow;
 
-// 当前编辑文档地址
-- ( NSURL *) activeDocumentURL;
-
-// 根据用户对hokey pokey窗口的点击更新文档和显示
-- (void) refreshFileContentAccording2Selection;
 @end

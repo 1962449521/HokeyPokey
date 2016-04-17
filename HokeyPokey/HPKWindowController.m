@@ -13,6 +13,11 @@
 
 
 @interface HPKWindowController () <NSTableViewDelegate>
+
+// 文案内容绑定
+@property (strong)  NSString *headerTitle4Show;
+@property (strong)  NSString *headerTitle4Identifier;
+
 // 切换窗口显示是否悬浮按钮
 @property (weak) IBOutlet NSButton *btnDock;
 
@@ -59,27 +64,7 @@
     NSString *editTile = editItem[HPKTitleKey];
     
     [self.contentArray insertObject:mEditItem atArrangedObjectIndex:savedSelectionIndex];
-    
-    NSURL *url = [self.pluginMain activeDocumentURL];
-    NSMutableArray *mArr = [self.pluginMain.contentArrDic objectForKey:url];
-    
-    __block NSUInteger found = -1;
-    [mArr enumerateObjectsUsingBlock:^(NSMutableDictionary * obj, NSUInteger idx, BOOL * stop) {
-        if ([obj[HPKTitleKey] isEqualToString: editTile]) {
-            found = idx;
-            *stop = YES;
-        }
-    }];
-    
-    if (found != -1) {
-        NSDictionary *editItem = [mArr objectAtIndex:found];
-        NSMutableDictionary *mEditItem = [NSMutableDictionary dictionary];
-        [mEditItem addEntriesFromDictionary:editItem];
-        [mEditItem setObject:@(shouldShow) forKey:HPKIsShownKey];
-        [mArr removeObject:editItem];
-        [mArr insertObject:mEditItem atIndex:found];
-        [self.pluginMain refreshFileContentAccording2Selection];
-    }
+    [self.pluginMain refreshEditorAndFileAtTiltle:editTile shouldShow:shouldShow];
 }
 
 

@@ -29,13 +29,23 @@ static Class IDEWorkspaceWindowControllerClass;
 
 @interface HPKPluginMain() <NSWindowDelegate>
 
+// hokey pokey数据库
+@property (nonatomic, strong) NSMutableDictionary *originalTextDic;
+@property (nonatomic, strong) NSMutableDictionary *contentArrDic;
+
+// 代码编辑窗口
+@property (nonatomic, strong) DVTSourceTextView  *ideSourceTextView;
 @property (nonatomic, strong) IDEWorkspaceWindow *ideWorkspaceWindow;
-@property (nonatomic, strong) DVTSourceTextView *ideSourceTextView;
-@property (nonatomic, strong) HPKWindowController *windowController;
-@property (nonatomic, strong) WHUKVOController *documentKVO;
+
+@property (nonatomic, strong) HPKWindowController *windowController;// 持有hokeypokey窗口
+@property (nonatomic, strong) WHUKVOController    *documentKVO;     // facebook的KVO类
+
+- (void) createHokeyPokeyMenu;  // 创建菜单
+- (void) createHokeyPokeyWindow;// 创建hokeypokey窗口
+- ( NSURL *) activeDocumentURL; // 返回当前编辑文档的地址
+- (void) refreshHokeyPokeyWindowWithURL:(NSURL *)url;// 刷新hokeypokey窗口的数据库源
 
 @end
-
 
 @implementation HPKPluginMain {
     __block NSURL *_activeDocumentURL;
@@ -68,7 +78,6 @@ static Class IDEWorkspaceWindowControllerClass;
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleTextViewWillChangeNotifyingTextView:) name:NSTextViewWillChangeNotifyingTextViewNotification object:nil];
 
-        
         _contentArrDic = [NSMutableDictionary dictionary];
         _originalTextDic = [NSMutableDictionary dictionary];
     }
@@ -200,7 +209,6 @@ static Class IDEWorkspaceWindowControllerClass;
 }
 
 #pragma mark -子菜单逻辑处理
-
 // 显示或隐藏hokeypokey窗口
 - (void) hMenuItemTriggled:(NSMenuItem *)menuItem {
     if (self.windowController) {    // 如果hokeypokey工作窗口存在，则销毁
@@ -354,17 +362,33 @@ static Class IDEWorkspaceWindowControllerClass;
 }
 
 // 根据用户对hokey pokey窗口的点击更新文档和显示
-- (void) refreshFileContentAccording2Selection {
+- (void) refreshEditorAndFileAtTiltle:(NSString *)editedTitle shouldShow:(BOOL)shouldShow {
     NSURL *url = _activeDocumentURL;
+    NSString *realStr =[self.originalTextDic objectForKey:url];
     NSMutableArray *mArr = [self.contentArrDic objectForKey:url];
-
     if ([mArr count] == 0) {
         return;
     }
     
-    NSMutableArray *excludeArr = [NSMutableArray array];
-    NSString *realStr =[self.originalTextDic objectForKey:url];
+    __block NSUInteger found = -1;
+    [mArr enumerateObjectsUsingBlock:^(NSMutableDictionary * obj, NSUInteger idx, BOOL * stop) {
+        if ([obj[HPKTitleKey] isEqualToString: editedTitle]) {
+            found = idx;
+            *stop = YES;
+        }
+    }];
+    if (found == -1) {
+        return;
+    }
+    
+    NSDictionary *editItem = [mArr objectAtIndex:found];
+    NSMutableDictionary *mEditItem = [NSMutableDictionary dictionary];
+    [mEditItem addEntriesFromDictionary:editItem];
+    [mEditItem setObject:@(shouldShow) forKey:HPKIsShownKey];
+    [mArr removeObject:editItem];
+    [mArr insertObject:mEditItem atIndex:found];
 
+    NSMutableArray *excludeArr = [NSMutableArray array];
     [mArr enumerateObjectsUsingBlock:^(NSMutableDictionary * obj, NSUInteger idx, BOOL * stop) {
         if (![obj[HPKIsShownKey] boolValue]) {
             [excludeArr addObjectsFromArray:obj[HPKPockyResultsKey]];
@@ -374,7 +398,6 @@ static Class IDEWorkspaceWindowControllerClass;
     NSString *remainStr = [realStr HPK_stringBySubtractSearchResults:excludeArr];
     self.ideSourceTextView.string = remainStr;
     [self write2Document];
-
 }
 
 @end

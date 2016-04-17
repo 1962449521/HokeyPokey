@@ -8,19 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface HPKSearchResult : NSObject
 
-@property (nonatomic, assign) NSRange range;
-@property (nonatomic, strong) NSString *string;
 @property (nonatomic, strong) NSString *title;
-
+@property (nonatomic, assign) NSRange  range;
+@property (nonatomic, strong) NSString *string;
 
 -(instancetype) initWithRange:(NSRange)aRange string:(NSString *)aString title:(NSString *)aTitle;
 
 @end
 
-@interface NSString (HPKTextGetter)
 
+@interface NSString (HPKTextGetter)
 
 - (NSArray<HPKSearchResult *> *) HPK_textResultsWithPairOpenString:(NSString *)open
                                                        closeString:(NSString *)close;

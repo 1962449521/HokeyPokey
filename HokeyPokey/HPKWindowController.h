@@ -11,18 +11,14 @@
 @class HPKPluginMain;
 @interface HPKWindowController : NSWindowController
 
+@property (weak) HPKPluginMain *pluginMain;// 插件管理对象
+@property (weak) IBOutlet NSTableView *tableView;// 插件窗口主控件
+
 // 文案内容绑定
 @property (strong)  NSString *windowTitle;
-@property (strong)  NSString *headerTitle4Show;
-@property (strong)  NSString *headerTitle4Identifier;
-@property (strong) IBOutlet NSArrayController *contentArray;
-
-// 插件窗口主控件
-@property (weak) IBOutlet NSTableView *tableView;
-// 插件主对象
-@property (weak)  HPKPluginMain *pluginMain;
+@property (strong)  IBOutlet NSArrayController *contentArray;
 
 // 用户双击事件绑定
-- (void)inspect:(NSArray *)selectedObjects;
+- (void) inspect:(NSArray *)selectedObjects;
 
 @end
